@@ -1,0 +1,17 @@
+# Training Hyperparameters Configuration
+model: yolov8n.pt # Options: yolov8n.pt, yolov8s.pt, yolo11n.pt
+epochs: 100
+imgsz: 640
+batch: 16
+workers: 4
+patience: 20
+save: true
+device: "" # auto-detect CUDA or CPU
+
+# Augmentation settings tailored for high-density insects
+degrees: 180.0    # 360-degree arbitrary orientation
+flipud: 0.5       # vertical flips
+fliplr: 0.5       # horizontal flips
+mosaic: 1.0       # mosaic augmentation
+mixup: 0.15       # mixup for dense occlusion handling
+

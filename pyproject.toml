@@ -1,0 +1,30 @@
+[project]
+name = "dubiacount"
+version = "0.1.0"
+description = "An automated dense object detection and counting system for Dubia roaches using YOLO and computer vision."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.5.4",
+    "opencv-python>=5.0.0.93",
+    "pillow>=13.0.0",
+    "pyyaml>=6.0.3",
+    "sahi>=0.14.0",
+    "streamlit>=1.67.0",
+    "ultralytics>=8.4.208",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.4",
+]
+
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP"]
+ignore = []

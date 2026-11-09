@@ -1,0 +1,31 @@
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# YOLO & Machine Learning artifacts
+runs/
+*.pt
+*.onnx
+weights/
+datasets/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
