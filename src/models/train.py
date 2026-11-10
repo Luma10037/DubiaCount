@@ -1,6 +1,7 @@
 """Training pipeline entrypoint for Dubia Roach YOLO models."""
 
 import argparse
+import shutil
 from pathlib import Path
 
 import yaml
@@ -26,6 +27,14 @@ def train(
     print(f"Hyperparameters: {cfg}")
 
     results = model.train(data=data_path, **cfg)
+
+    best = Path(model.trainer.save_dir) / "weights" / "best.pt"
+    if best.exists():
+        destination = Path("weights") / "best.pt"
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(best, destination)
+        print(f"Copied best weights to {destination}")
+
     print("Training completed.")
     return results
 

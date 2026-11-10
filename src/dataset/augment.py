@@ -5,11 +5,11 @@ from dataclasses import dataclass
 
 @dataclass
 class AugmentationConfig:
-    degrees: float = 180.0
+    degrees: float = 20.0
     flipud: float = 0.5
     fliplr: float = 0.5
-    mosaic: float = 1.0
-    mixup: float = 0.15
+    mosaic: float = 0.5
+    mixup: float = 0.0
 
     def to_yolo_args(self) -> dict[str, float]:
         return {

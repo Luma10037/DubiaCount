@@ -1,14 +1,9 @@
 # Dataset configuration for Dubia Roach Detection
-path: ../datasets/dubia # dataset root dir
-train: images/train
-val: images/val
-test: images/test
+path: datasets/dubia # dataset root dir (relative to project root)
+train: train/images
+val: valid/images
+test: test/images
 
 # Classes
 names:
   0: dubia
-  # Multi-class extension roadmap:
-  # 0: adult_male
-  # 1: adult_female
-  # 2: nymph
-
